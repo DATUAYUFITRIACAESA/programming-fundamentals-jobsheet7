@@ -46,13 +46,18 @@ public class SiakadFor06 {
 #### 2.1.2 Screenshot Output
 Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
-![Contoh Gambar Output Percobaan 1](/contoh-gambar.png)
+![Example Image of Experiment 1 Output](/StudentScore.png)
 
-#### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
-* **Pertanyaan 1:** Apa fungsi dari perintah `if`?
-  * **Jawab:** Perintah `if` digunakan untuk mengeksekusi sebuah blok kode hanya jika kondisi bernilai `true`.
-* **Pertanyaan 2:** Apa yang terjadi jika kondisi bernilai `false`?
-  * **Jawab:** Program akan melewati blok `if` dan mengeksekusi blok `else` (jika ada).
+#### 2.1.3 Questions
+* **Question 1:** Apa fungsi dari perintah `if`?
+  * **Answer:** Identify and indicate each component of the FOR loop in the program code of Experiment 1! 
+* **Question 2:** Why is the variable highest initialized to 0 and the variable lowest initialized to 100? What happens if highest is initialized to 100 and lowest is initialized to 0? 
+  * **Answer:** Program akan melewati blok `if` dan mengeksekusi blok `else` (jika ada).
+* **Question 3:** Explain the function and workflow of the following code snippet!
+![](/StudentScore.png)
+  * **Answer:** Program akan melewati blok `if` dan mengeksekusi blok `else` (jika ada).
+* **Question 4:** Modify the program to count how many students pass and how many students fail, based on the passing threshold (minimum score of 60). Display the number of students who pass and fail after displaying the highest and lowest scores!  
+  * **Answer:** Program akan melewati blok `if` dan mengeksekusi blok `else` (jika ada).
 
 ---
 
