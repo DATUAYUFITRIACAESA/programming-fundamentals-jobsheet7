@@ -3,47 +3,47 @@
 **Identitas Mahasiswa:**
 * **Nama:** Datu Ayu Fitria Ceasa
 * **NIM:** 264107020087
-* **Kelas / No. Presensi:** 1I/06
+* **Kelas / No. Presensi:** 1I / 06
 
 ---
 
-## 1: TUJUAN PRAKTIKUM
+## 1: OBJECTIVES
 
-Berikut adalah tujuan pelaksanaan praktikum pada bab ini:
-
-1. Mahasiswa mampu memahami konsep dasar struktur pemilihan (*conditional statement*).
-2. Mahasiswa mampu mengimplementasikan perintah `if`, `if-else`, dan `switch-case` pada Java.
-3. Mahasiswa mampu menganalisis alur eksekusi logika percabangan.
+1. Students are able to explain the syntax for writing loop programs (for, while, and do while). 
+2. Students are able to implement loop flowcharts using the Java programming 
+language. 
 
 ---
 
-## 2: HASIL PERCOBAAN & ANALISIS
+## 2: Practical Exercises
 
-### 2.1 Percobaan 1: Penerapan Struktur IF-ELSE
+### 2.1 Experiment 1: Student Grades Case Study in SIAKAD – FOR Loop
 
-Ini adalah paragraf contoh yang menjelaskan gambaran singkat mengenai percobaan pertama. Pada bagian ini, mahasiswa diminta untuk menerapkan kondisi `if-else` sederhana.
-
-#### 2.1.1 Kode Program Java
+#### 2.1.1 Java Code
 ```java
-// Contoh kode program dummy Percobaan 1
 import java.util.Scanner;
 
-public class Percobaan1 {
+public class SiakadFor06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan nilai: ");
-        int nilai = sc.nextInt();
-
-        if (nilai >= 75) {
-            System.out.println("Status: LULUS");
-        } else {
-            System.out.println("Status: TIDAK LULUS");
-        }
+        double score, highest = 0, lowest = 100;
+        for (int i = 1; i <= 10; i++) { 
+            System.out.print("Enter score for student " + i + ": "); 
+            score = sc.nextDouble(); 
+            if (score > highest) { 
+                highest = score; 
+            } 
+            if (score < lowest) { 
+                lowest = score; 
+            } 
+        } 
+        System.out.println("Highest score: " + highest); 
+        System.out.println("Lowest score: " + lowest); 
     }
 }
 ```
 
-#### 2.1.2 Hasil Running / Screenshot Output
+#### 2.1.2 Screenshot Output
 Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
 ![Contoh Gambar Output Percobaan 1](/contoh-gambar.png)
