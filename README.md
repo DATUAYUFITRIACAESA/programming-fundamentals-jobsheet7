@@ -44,7 +44,6 @@ public class SiakadFor06 {
 ```
 
 #### 2.1.2 Screenshot Output
-Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
 ![Example Image of Experiment 1 Output](/StudentScore.png)
 
@@ -93,11 +92,73 @@ public class SiakadFor06 {
 
 ### 2.2  Experiment 2: Student Grades Case Study in SIAKAD – WHILE Loop
 
-Paragraf ini menjelaskan ringkasan Percobaan 2. Percobaan ini berfokus pada penggunaan `switch-case` untuk memilih menu atau opsi berdasarkan nilai yang bersifat spesifik.
+#### 2.2.1 Java Code
+```java
+import java.util.Scanner;
 
-#### 2.2.1 Tabel Pengujian Parameter Output
+public class siakadwhile06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double score;
+        int studentCount, i=0;
+        
+        System.out.print("Enter the number of students: "); 
+        studentCount = sc.nextInt();
 
-Berikut adalah hasil uji coba program dengan beberapa variasi masukan *dummy*:
+        while (i < studentCount) { 
+            System.out.print("Enter score for student " + (i + 1) + ": "); 
+            score = sc.nextInt(); 
+ 
+            if (score < 0 || score > 100) { 
+                System.out.println("Invalid score. Please enter a valid score!"); 
+                continue; 
+            } 
+ 
+            if (score > 80 && score <= 100) { 
+                System.out.println("The grade of student " + (i + 1) + " is A"); 
+            } else if (score > 73 && score <= 80) { 
+                System.out.println("The grade of student " + (i + 1) + " is B+"); 
+            } else if (score > 65 && score <= 73) { 
+                System.out.println("The grade of student " + (i + 1) + " is B"); 
+            } else if (score > 60 && score <= 65) { 
+                System.out.println("The grade of student " + (i + 1) + " is C+"); 
+            } else if (score > 50 && score <= 60) { 
+                System.out.println("The grade of student " + (i + 1) + " is C"); 
+            } else if (score > 39 && score <= 50) { 
+                System.out.println("The grade of student " + (i + 1) + " is D"); 
+            } else { 
+                System.out.println("The grade of student " + (i + 1) + " is E"); 
+            } 
+            i++; 
+        }
+    }
+}
+```
+![](/siakadwhile.png)
+
+
+#### 2.2.2 Verification of Experimental Results
+
+Compare the output of your program with the following figure:
+
+```
+Enter the number of students: 5 
+Enter score for student 1: 85 
+The grade of student 1 is A 
+Enter score for student 2: 63
+The grade of student 2 is C+ 
+Enter score for student 3: 101 
+Invalid score. Please enter a valid score! 
+Enter score for student 3: 23 
+The grade of student 3 is E 
+Enter score for student 4: -15 
+Invalid score. Please enter a valid score! 
+Enter score for student 4: 70 
+The grade of student 4 is B 
+Enter score for student 5: 55 
+The grade of student 5 is C
+```
+
 
 | No | Input Parameter | Output yang Dihasilkan | Status Eksekusi |
 | :---: | :--- | :--- | :---: |
