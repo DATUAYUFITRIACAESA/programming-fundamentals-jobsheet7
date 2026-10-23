@@ -87,11 +87,11 @@ public class SiakadFor06 {
     }
 }
 ```
-![](/CodeSnipped.png)
+![](/runCode.png)
 
 ---
 
-### 2.2 Percobaan 2: Penerapan Structure SWITCH-CASE
+### 2.2  Experiment 2: Student Grades Case Study in SIAKAD – WHILE Loop
 
 Paragraf ini menjelaskan ringkasan Percobaan 2. Percobaan ini berfokus pada penggunaan `switch-case` untuk memilih menu atau opsi berdasarkan nilai yang bersifat spesifik.
 
