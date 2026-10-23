@@ -158,6 +158,76 @@ The grade of student 4 is B
 Enter score for student 5: 55 
 The grade of student 5 is C
 ```
+![](/trycode.png)
+
+#### 2.2.3 Questions
+* **Question 1:** IIn the following code snippet, determine the meaning and purpose of the following syntax:
+```
+if (score < 0 || score > 100) { 
+System.out.println("Invalid score. Please enter a valid score!"); 
+continue; 
+}
+```
+  * **Answer:**
+    The syntax if (score < 0 || score > 100) { System.out.println("Invalid score. Please enter a valid score!"); continue; } means: if the score is less than 0 or greater than 100, it is invalid, so the program prints an error message and immediately skips the rest of the current loop iteration using continue. Its purpose is to prevent invalid input from being processed and to force the user to enter a correct score before continuing to the next student. The expression in part:
+    
+    (a) is score < 0 || score > 100, which means “score is below 0 or above 100,”
+    
+    (b) continue tells the loop to stop the current iteration and go back to the loop condition.
+* **Question 2:** Why is the i++ statement written at the end of the WHILE loop? What happens if it is written at the beginning of the WHILE loop?
+  * **Answer:**
+    The i++ statement is written at the end of the while loop so that each time a valid student score is entered and processed, the counter increases by 1. This keeps track of how many students have already been handled and ensures the loop eventually stops when i reaches studentCount. If i++ were written at the beginning of the loop, the loop would skip the first student because i would increase before checking or processing the score, causing the program to count incorrectly and possibly stop too early.
+* **Question 3:** If the number of students entered is 19, how many times will the WHILE loop run?  
+  * **Answer:**
+    If the number of students entered is 19, the while loop will run 19 times, because the loop condition is while (i < studentCount), so it repeats until i reaches 19. Each valid student input increases i by 1, and the loop stops when i becomes 19.
+* **Question 4:**Modify the program so that, if a student receives grade A, the program displays an 
+additional message “Well done, keep up the good work!”  
+  * **Answer:**
+    ![](/trycode.png)
+
+### 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
+
+#### 2.1.1 Java Code
+```java
+import java.util.Scanner;
+
+public class SiakadFor06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double score, highest = 0, lowest = 100;
+        for (int i = 1; i <= 10; i++) { 
+            System.out.print("Enter score for student " + i + ": "); 
+            score = sc.nextDouble(); 
+            if (score > highest) { 
+                highest = score; 
+            } 
+            if (score < lowest) { 
+                lowest = score; 
+            } 
+        } 
+        System.out.println("Highest score: " + highest); 
+        System.out.println("Lowest score: " + lowest); 
+    }
+}
+```
+
+#### 2.1.2 Screenshot Output
+
+![Example Image of Experiment 1 Output](/StudentScore.png)
+
+#### 2.1.3 Questions
+* **Question 1:** Identify and indicate each component of the FOR loop in the program code of Experiment 1!
+* **Question 2:** Why is the variable highest initialized to 0 and the variable lowest initialized to 100? What happens if highest is initialized to 100 and lowest is initialized to 0? 
+  * **Answer:** The variable highest is initialized to 0 and lowest to 100 because the program is designed to read scores that are expected to be in the range of 0 to 100. This way, the first score entered will automatically replace these starting values if it is higher or lower than them. If highest were initialized to 100 and lowest to 0, the program would start with the wrong comparison values, so it could fail to detect the actual maximum and minimum correctly, and the final output would be wrong.
+* **Question 3:** Explain the function and workflow of the following code snippet!
+![](/CodeSnipped.png)
+  * **Answer:** This snippet compares each entered score with the current highest and lowest values. If score > highest, then the score is larger than the previous maximum, so it replaces highest with the new value. If score < lowest, then the score is smaller than the previous minimum, so it replaces lowest with the new value. In other words, this code continuously updates the highest and lowest scores as new values are entered, so after all inputs are processed, the variables store the maximum and minimum scores from the set.
+* **Question 4:** Modify the program to count how many students pass and how many students fail, based on the passing threshold (minimum score of 60). Display the number of students who pass and fail after displaying the highest and lowest scores!  
+  * **Answer:**
+
+
+
+
 
 
 | No | Input Parameter | Output yang Dihasilkan | Status Eksekusi |
