@@ -183,7 +183,7 @@ continue;
 * **Question 4:**Modify the program so that, if a student receives grade A, the program displays an 
 additional message “Well done, keep up the good work!”  
   * **Answer:**
-    ![](/trycode.png)
+    ![](/modifiedcode.png)
 
 ### 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
 
