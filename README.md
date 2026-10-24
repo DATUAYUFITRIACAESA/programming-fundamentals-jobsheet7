@@ -186,7 +186,7 @@ additional message “Well done, keep up the good work!”
 
 ### 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
 
-#### 2.1.1 Java Code
+#### 2.3.1 Java Code
 ```java
 import java.util.Scanner;
 
@@ -221,53 +221,85 @@ public class cafeDoWhile06 {
 }
 ```
 
-#### 2.1.2 Screenshot Output
+#### 2.3.2 Screenshot Output
 
-![Example Image of Experiment 3 Output](/StudentScore.png)
+![Example Image of Experiment 3 Output](/coffeeCust.png)
 
-#### 2.1.3 Questions
-* **Question 1:** Identify and indicate each component of the FOR loop in the program code of Experiment 1!
-* **Question 2:** Why is the variable highest initialized to 0 and the variable lowest initialized to 100? What happens if highest is initialized to 100 and lowest is initialized to 0? 
-  * **Answer:** The variable highest is initialized to 0 and lowest to 100 because the program is designed to read scores that are expected to be in the range of 0 to 100. This way, the first score entered will automatically replace these starting values if it is higher or lower than them. If highest were initialized to 100 and lowest to 0, the program would start with the wrong comparison values, so it could fail to detect the actual maximum and minimum correctly, and the final output would be wrong.
-* **Question 3:** Explain the function and workflow of the following code snippet!
-![](/CodeSnipped.png)
-  * **Answer:** This snippet compares each entered score with the current highest and lowest values. If score > highest, then the score is larger than the previous maximum, so it replaces highest with the new value. If score < lowest, then the score is smaller than the previous minimum, so it replaces lowest with the new value. In other words, this code continuously updates the highest and lowest scores as new values are entered, so after all inputs are processed, the variables store the maximum and minimum scores from the set.
-* **Question 4:** Modify the program to count how many students pass and how many students fail, based on the passing threshold (minimum score of 60). Display the number of students who pass and fail after displaying the highest and lowest scores!  
-  * **Answer:**
-
-
-
-
-
-
-| No | Input Parameter | Output yang Dihasilkan | Status Eksekusi |
-| :---: | :--- | :--- | :---: |
-| 1 | `Case 1` | "Pilihan 1 Dipilih" | Valid |
-| 2 | `Case 2` | "Pilihan 2 Dipilih" | Valid |
-| 3 | `Default` | "Pilihan Tidak Tersedia" | Invalid |
+#### 2.3.3 Questions
+* **Question 1:** In this DO-WHILE loop, if the first customer name entered is “cancel”, how many times is the loop executed?
+  * **Answer:** The loop runs once. A do-while loop executes its body before checking the condition. Since the first name is “cancel,” the break statement exits the loop during that first execution.
+* **Question 2:** State the stopping condition used in this DO-WHILE loop! 
+  * **Answer:** The loop’s condition is while (true), which is always true. In practice, the loop stops when the customer enters “cancel” and the break statement runs.
+* **Question 3:** What is the function of using the value true in the DO-WHILE condition? 
+  * **Answer:** true makes the loop repeat indefinitely unless it is exited another way, such as with the break statement.
+* **Question 4:**Why does this DO-WHILE loop still run even though it has no initialization and update components?   
+  * **Answer:** A do-while loop does not require initialization or update components like a for loop. It executes its body, checks its condition, and repeats while the condition is true. Here, the loop is controlled by while (true) and exits through break when the customer enters “cancel”.
 
 ---
 
-## 3: TUGAS MANDIRI
+## 3: Assignment 
 
-Berikut adalah daftar tugas yang dikerjakan pada Jobsheet ini:
+The following is a list of tasks performed on this Jobsheet:
 
-- [x] **Tugas 1:** Mengubah struktur `if-else` menjadi *Ternary Operator*.
-- [x] **Tugas 2:** Membuat program berdasarkan *Flowchart* penentuan SKS.
-- [ ] **Tugas 3:** Mengimplementasikan studi kasus parkir & antrean.
+- [x] **Task 1:** A cinema manager wants to create a program to calculate the total ticket sales in one 
+day. Tickets are sold at Rp 50,000 per ticket. The program must calculate the total number 
+of tickets sold and the total ticket sales revenue for the day, subject to the following rules:
 
-### 3.1 Implementasi Kode Tugas
+    • If a customer buys more than 4 tickets, the customer receives a 10% discount. 
+
+    • If a customer buys more than 10 tickets, the customer receives a 15% discount. 
+
+    • If the ticket quantity entered is invalid (negative), the program ignores the input and 
+      asks for it to be re-entered.
+      
+- [x] **Task 2:** Refer to the following flowchart!
+      A parking lot operator wants to create a program to calculate the total parking fees of 
+several vehicles. The parking rate is Rp 3,000 per hour for cars and Rp 2,000 per hour for 
+motorcycles. The program keeps asking for input as long as the input is not 0. Implement 
+the flowchart as a Java program! 
+
+### 3.1 Task Code Implementation
 
 ```java
-// Contoh Kode Program Tugas Mandiri
-public class TugasMandiri {
+import java.util.Scanner;
+
+public class ticketSale {
     public static void main(String[] args) {
-        int sks = 20;
-        String status = (sks <= 24) ? "KRS Valid" : "Melebihi Batas";
-        System.out.println(status);
+        Scanner sc = new Scanner(System.in);
+        int TICKET_PRICE = 50000;
+        int customerCount, totalTickets = 0;
+        double totalRevenue = 0;
+
+        System.out.print("Enter the number of customers: ");
+        customerCount = sc.nextInt();
+
+        for (int i = 1; i <= customerCount; i++) {
+            int quantity;
+            do {
+                System.out.print("Enter the number of tickets for customer " + i + ": ");
+                quantity = sc.nextInt();
+                if (quantity < 0) {
+                    System.out.println("Invalid quantity. Please enter a non-negative number.");
+                }
+            } while (quantity < 0);
+
+            double discountRate = 0;
+            if (quantity > 10) {
+                discountRate = 0.15;
+            } else if (quantity > 4) {
+                discountRate = 0.10;
+            }
+
+            totalTickets += quantity;
+            totalRevenue += quantity * TICKET_PRICE * (1 - discountRate);
+        }
+        System.out.println("Total tickets sold: " + totalTickets);
+        System.out.printf("Total ticket sales revenue: Rp %.0f%n", totalRevenue);
     }
 }
 ```
+
+![](/coffeeCust.png)
 
 ---
 
