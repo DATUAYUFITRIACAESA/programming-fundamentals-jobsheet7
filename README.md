@@ -299,10 +299,10 @@ public class ticketSale {
 }
 ```
 
-![](/ticketSale.png)
+![](/parking.png)
 
 ---
 
-## 4: KESIMPULAN
+## 4: Conclusion
 
-Tuliskan paragraf kesimpulan di sini. Secara singkat, struktur pemilihan sangat penting digunakan untuk mengatur alur jalannya program (*flow control*) berdasarkan variabel atau pilihan yang ditentukan oleh pengguna.
+These programs demonstrate how loops and conditional statements can automate repeated tasks. They use for, while, and do-while loops to process student scores, customer orders, ticket sales, and parking fees. Conditions help validate inputs, assign grades, apply discounts, and calculate totals. Together, these concepts make programs more efficient and responsive to user input.
