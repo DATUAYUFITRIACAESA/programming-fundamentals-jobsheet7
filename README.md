@@ -253,7 +253,8 @@ of tickets sold and the total ticket sales revenue for the day, subject to the f
       asks for it to be re-entered.
       
 - [x] **Task 2:** Refer to the following flowchart!
-![](/ticketSaler.png)
+      
+![](/flowchart.png)
 
 A parking lot operator wants to create a program to calculate the total parking fees of several vehicles. The parking rate is Rp 3,000 per hour for cars and Rp 2,000 per hour for motorcycles. The program keeps asking for input as long as the input is not 0. Implement the flowchart as a Java program! 
 
@@ -298,7 +299,7 @@ public class ticketSale {
 }
 ```
 
-![](/ticketSaler.png)
+![](/ticketSale.png)
 
 ---
 
