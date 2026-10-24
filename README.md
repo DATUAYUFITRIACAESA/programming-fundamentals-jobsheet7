@@ -134,8 +134,7 @@ public class siakadwhile06 {
     }
 }
 ```
-![](/siakadwhile.png)
-
+![Example Image of Experiment 2 Output](/siakadwhile.png)
 
 #### 2.2.2 Verification of Experimental Results
 
@@ -191,29 +190,40 @@ additional message “Well done, keep up the good work!”
 ```java
 import java.util.Scanner;
 
-public class SiakadFor06 {
+public class cafeDoWhile06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double score, highest = 0, lowest = 100;
-        for (int i = 1; i <= 10; i++) { 
-            System.out.print("Enter score for student " + i + ": "); 
-            score = sc.nextDouble(); 
-            if (score > highest) { 
-                highest = score; 
+        
+        int coffee, tea, bread, totalPrice;
+        int coffeePrice = 12000, teaPrice = 7000, breadPrice = 20000;
+        String customerName;
+        do { 
+            System.out.print("Enter customer name (type 'cancel' to exit): "); 
+            customerName = sc.nextLine(); 
+            if (customerName.equalsIgnoreCase("cancel")) { 
+                System.out.println("Transaction canceled."); 
+                break; 
             } 
-            if (score < lowest) { 
-                lowest = score; 
-            } 
-        } 
-        System.out.println("Highest score: " + highest); 
-        System.out.println("Lowest score: " + lowest); 
+            System.out.print("Coffee quantity: "); 
+            coffee = sc.nextInt(); 
+            System.out.print("Tea quantity: "); 
+            tea = sc.nextInt(); 
+            System.out.print("Bread quantity: "); 
+            bread = sc.nextInt(); 
+            totalPrice = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice); 
+            System.out.println("Total amount to pay: Rp " + totalPrice); 
+            sc.nextLine(); 
+        } while (true); 
+ 
+        System.out.println("All transactions completed."); 
+        
     }
 }
 ```
 
 #### 2.1.2 Screenshot Output
 
-![Example Image of Experiment 1 Output](/StudentScore.png)
+![Example Image of Experiment 3 Output](/StudentScore.png)
 
 #### 2.1.3 Questions
 * **Question 1:** Identify and indicate each component of the FOR loop in the program code of Experiment 1!
