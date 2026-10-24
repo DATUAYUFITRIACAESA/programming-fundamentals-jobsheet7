@@ -179,7 +179,7 @@ continue;
 * **Question 3:** If the number of students entered is 19, how many times will the WHILE loop run?  
   * **Answer:**
     If the number of students entered is 19, the while loop will run 19 times, because the loop condition is while (i < studentCount), so it repeats until i reaches 19. Each valid student input increases i by 1, and the loop stops when i becomes 19.
-* **Question 4:**Modify the program so that, if a student receives grade A, the program displays an 
+* **Question 4:** Modify the program so that, if a student receives grade A, the program displays an 
 additional message “Well done, keep up the good work!”  
   * **Answer:**
     ![](/modifiedcode.png)
