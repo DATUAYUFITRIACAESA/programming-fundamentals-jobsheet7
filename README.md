@@ -258,7 +258,7 @@ of tickets sold and the total ticket sales revenue for the day, subject to the f
 
 A parking lot operator wants to create a program to calculate the total parking fees of several vehicles. The parking rate is Rp 3,000 per hour for cars and Rp 2,000 per hour for motorcycles. The program keeps asking for input as long as the input is not 0. Implement the flowchart as a Java program! 
 
-### 3.1 Task Code Implementation
+### 3.1 Task 1 Code Implementation
 
 ```java
 import java.util.Scanner;
@@ -298,7 +298,39 @@ public class ticketSale {
     }
 }
 ```
+![](/ticketSaler.png)
 
+### 3.2 Task 2 Code Implementation
+```java
+import java.util.Scanner;
+
+public class motorcycle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int type, duration, total = 0;
+
+        do {
+            System.out.print("Enter vehicle type (1=Car, 2=Motorcycle, 0=Exit): ");
+            type = sc.nextInt();
+
+            if (type == 1 || type == 2) {
+                System.out.print("Enter parking duration in hours: ");
+                duration = sc.nextInt();
+
+                if (type == 1) {
+                    total += duration * 3000;
+                } else {
+                    total += duration * 2000;
+                }
+            } else if (type != 0) {
+                System.out.println("Invalid vehicle type. Please enter 1, 2, or 0.");
+            }
+        } while (type != 0);
+
+        System.out.println("Total parking fee: Rp " + total);
+    }
+}
+```
 ![](/parking.png)
 
 ---
